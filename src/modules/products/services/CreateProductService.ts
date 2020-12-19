@@ -24,7 +24,7 @@ class CreateProductService {
       throw new AppError('This product already exists');
     }
 
-    const product = await this.ormRepository.create({
+    const product = await this.productsRepository.create({
       name,
       price,
       quantity,
